@@ -8,7 +8,6 @@ This project was created as part of [MyList1](https://github.com/vinils/MyList1)
 
 ```csharp
 using MyList;
-
 using MyList.DAL;
 
 
