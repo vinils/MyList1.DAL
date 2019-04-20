@@ -57,7 +57,14 @@
                 command.Parameters.AddWithValue("@ProcessId", processId);
                 command.Parameters.AddWithValue("@Path", (string)directory);
 
-                return command.ExecuteNonQuery();
+                try
+                {
+                    return command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
         }
 

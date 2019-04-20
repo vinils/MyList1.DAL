@@ -19,8 +19,14 @@
         public string Name { get; private set; }
         public string Extension { get; private set; }
 
+        public string GetFullName()
+            => string.IsNullOrEmpty(Extension) ? Name : $"{Name}.{Extension}";
+
+        public string GetFullPath()
+            => Drive + Path;
+
         public string GetFullPathAndName()
-            => Drive + Path + "\\" + Name + "." + Extension;
+            =>  $"{GetFullPath()}\\{GetFullName()}";
 
         public int? ContractIndex { get; private set; }
 

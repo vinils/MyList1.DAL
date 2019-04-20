@@ -62,7 +62,14 @@
                 command.Parameters.AddWithValue("@Extension", extension);
                 command.Parameters.AddWithValue("@ContractIndex", contractIndex);
 
-                return command.ExecuteNonQuery();
+                try
+                {
+                    return command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
         }
 
