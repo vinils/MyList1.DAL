@@ -32,12 +32,12 @@
         { }
 
         public Cloud()
-            : this(@"Persist Security Info=False;User ID=sa;Password=P@ssword09;Initial Catalog=MyCompare1;Data Source=192.168.15.250;MultipleActiveResultSets=True")
+            : this(Environment.GetEnvironmentVariable("STR_SQL_CONN"))
         { }
 
         public Cloud(Guid processId)
-            : this(processId, @"Persist Security Info=False;User ID=sa;Password=P@ssword09;Initial Catalog=MyCompare1;Data Source=192.168.15.250;MultipleActiveResultSets=True")
-        { } 
+            : this(processId, Environment.GetEnvironmentVariable("STR_SQL_CONN"))
+        { }
 
         public void OpenConnection() => Connection.Open();
 

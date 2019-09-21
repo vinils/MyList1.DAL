@@ -1,0 +1,19 @@
+# directories
+packages/
+bin/
+obj/
+out/
+.vs/
+.git/
+
+MyList.DAL/packages/
+MyList.DAL/bin/
+MyList.DAL/obj/
+MyList.DAL/out/
+MyList.DAL/.vs/
+MyList.DAL/.git/
+
+# files
+Dockerfile*
+*.trx
+*.md
