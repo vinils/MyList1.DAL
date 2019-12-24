@@ -14,6 +14,7 @@
 
         public string Drive { get; private set; }
         public string Path { get; private set; }
+        public string Name => DirectoryInfo.Name;
         private string GetFullPath() => Drive + Path;
 
         Directory IRecursion<Directory>.Item
